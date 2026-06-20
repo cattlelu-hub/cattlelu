@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  /* Glowing effects */
+  .glow-red {
+    text-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+  }
+  .glow-green {
+    text-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
+  }
+  .glow-amber {
+    text-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+  }
+  
+  /* Blinking keyframes */
+  @keyframes scan-radar {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+  @keyframes subtle-pulse {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.95; }
+  }
+  @keyframes blink-alert {
+    0%, 100% { background-color: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); }
+    50% { background-color: rgba(239, 68, 68, 0.35); border-color: rgba(239, 68, 68, 0.85); box-shadow: 0 0 12px rgba(239, 68, 68, 0.4); }
+  }
+
+  .animate-radar-scan {
+    animation: scan-radar 4s linear infinite;
+  }
+  .animate-subtle-pulse {
+    animation: subtle-pulse 2.5s ease-in-out infinite;
+  }
+  .animate-blink-alert {
+    animation: blink-alert 1.2s infinite;
+  }
+}
+
+/* Custom scrollbars for full desktop terminal feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(71, 85, 105, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.7);
+}

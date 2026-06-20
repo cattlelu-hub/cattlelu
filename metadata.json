@@ -1,0 +1,6 @@
+{
+  "name": "XQ Group Momentum Radar Dashboard",
+  "description": "An interactive web dashboard for monitoring stock industry cluster breakout signals, tracking custom user-defined index momentum, and simulating XQ XS scripts with multi-condition indicators and real-time alerts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
